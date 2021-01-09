@@ -9,7 +9,7 @@ import javax.validation.constraints.*;
 public class Word {
 
     @NotEmpty(groups = {Update.class})
-    private final String id;
+    private String id;
     private final Language language;
     @NotEmpty
     @Size(min = 1)
@@ -50,4 +50,9 @@ public class Word {
     public String getAddedBy() {
         return addedBy;
     }
+
+    public void setId(String id){
+        this.id = id;
+    }
+
 }
